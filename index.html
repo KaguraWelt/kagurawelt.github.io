@@ -1,9 +1,25 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-   <title>Redirecting to KaguraWelt</title>
-   <meta http-equiv="refresh" content="0; URL=https://youtu.be/dQw4w9WgXcQ">
-   <link rel="canonical" href="https://youtu.be/dQw4w9WgXcQ">
-</meta>
+<iframe id="video-frame" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?&amp;enablejsapi=1&amp;autoplay=1&amp;mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="width: 1033px; height: 581px; left: 410px; top: 0px;" frameborder="0"></iframe>
+
+<script>
+   
+    var player;
+    var frame = document.querySelector('#video-frame');
+    var cookieConsent = document.querySelector('#cookie-consent');
+    var firstScriptTag = document.querySelector('script');
+    var tag = document.createElement('script');
+    tag.id = 'iframe-demo';
+    tag.src = 'https://www.youtube.com/iframe_api';
+    frame.setAttribute('height', Math.floor(frame.clientWidth * .6));
 
 
-<h1> </h1>
+
+    function onYouTubeIframeAPIReady() {
+       player.unMute();
+               player.seekTo(0);
+        player = new YT.Player('video-frame');
+    }
+
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+</script>
