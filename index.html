@@ -1,27 +1,14 @@
-<h1> You've been rickrolled. Haha. </h1>
+<h1> You've been rickrolled. Haha. :) </h1>
 
-<iframe id="video-frame" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?&amp;enablejsapi=1&amp;autoplay=1&amp;mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="width: 1033px; height: 581px; left: 410px; top: 0px;" frameborder="0"></iframe>
+<iframe id="video-frame" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="width: 1033px; height: 681px; left: 510px; top: 0px;" frameborder="0"></iframe>
 
 <script>
    
-    var player;
-    var frame = document.querySelector('#video-frame');
-    var cookieConsent = document.querySelector('#cookie-consent');
-    var firstScriptTag = document.querySelector('script');
-    var tag = document.createElement('script');
-    tag.id = 'iframe-demo';
-    tag.src = 'https://www.youtube.com/iframe_api';
-    frame.setAttribute('height', Math.floor(frame.clientWidth * .6));
-
-
-
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('video-frame');
-       player.unMute();
-        player.seekTo(0);
-    }
-
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+$(document).ready(function() {
+ 
+    $("#video-frame")[0].src += "&autoplay=1";
+ 
+});
 
 
 </script>
